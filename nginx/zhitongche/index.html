@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>惠道开发地址直通车</title>
+  <style>
+    .fill:hover,
+    .fill:focus {
+      box-shadow: inset 0 0 0 2em var(--hover);
+    }
+
+    .pulse:hover,
+    .pulse:focus {
+      -webkit-animation: pulse 1s;
+      animation: pulse 1s;
+      box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+    }
+
+    @-webkit-keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 var(--hover);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 var(--hover);
+      }
+    }
+
+    .close:hover,
+    .close:focus {
+      box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+    }
+
+    .raise:hover,
+    .raise:focus {
+      box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+      -webkit-transform: translateY(-0.25em);
+      transform: translateY(-0.25em);
+    }
+
+    .up:hover,
+    .up:focus {
+      box-shadow: inset 0 -3.25em 0 0 var(--hover);
+    }
+
+    .slide:hover,
+    .slide:focus {
+      box-shadow: inset 6.5em 0 0 0 var(--hover);
+    }
+
+    .offset {
+      box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+    }
+
+    .offset:hover, .offset:focus {
+      box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+    }
+
+    .fill {
+      --color: #a972cb;
+      --hover: #cb72aa;
+    }
+
+    .pulse {
+      --color: #ef6eae;
+      --hover: #ef8f6e;
+    }
+
+    .close {
+      --color: #ff7f82;
+      --hover: #ffdc7f;
+    }
+
+    .raise {
+      --color: #ffa260;
+      --hover: #e5ff60;
+    }
+
+    .up {
+      --color: #e4cb58;
+      --hover: #94e458;
+    }
+
+    .slide {
+      --color: #8fc866;
+      --hover: #66c887;
+    }
+
+    .offset {
+      --color: #19bc8b;
+      --hover: #1973bc;
+    }
+
+    a {
+      color: var(--color);
+      -webkit-transition: 0.25s;
+      transition: 0.25s;
+    }
+
+    a:hover, a:focus {
+      border-color: var(--hover);
+      color: #fff;
+    }
+
+    body {
+      color: #fff;
+      background: #17181c;
+      font: 300 1em 'Fira Sans', sans-serif;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .ewm {
+      display: inline-block;
+      position: relative;
+    }
+
+    .ewm span {
+      position: absolute;
+      top: 41px;
+      left: 115px;
+      width: 230px;
+      height: 230px;
+      z-index: 999;
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      display: none;
+    }
+    
+    a {
+      background: none;
+      border: 2px solid;
+      font: inherit;
+      line-height: 1;
+      margin: 0.5em;
+      padding: 1em;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+    }
+
+    h1 {
+      font-weight: 400;
+    }
+
+    code {
+      color: #e4cb58;
+      font: inherit;
+    }
+    /*内外微*/
+    #a9span {
+      background-image: url(ewm/test1W.jpg);
+    }
+    #aa9span {
+      background-image: url(ewm/test1N.jpg);
+    }
+    #b5span {
+      background-image: url(ewm/test2W.jpg);
+    }
+    #bb5span {
+      background-image: url(ewm/test2N.jpg);
+    }
+  </style>
+</head>
+<body>
+<div class="buttons">
+  <h1><code>惠道开发地址直通车</code></h1>
+
+  <a href="javascript:;" class="close" id="d1">hzy官网（线上）</a>
+  <a href="javascript:;" class="close" id="d2">hzy用户管理（线上）</a>
+  <a href="javascript:;" class="close" id="d3">hzy资产管理（线上）</a>
+  <a href="javascript:;" class="close" id="d4">hzy渠道管理（线上）</a>
+  <a href="javascript:;" class="close" id="d5">hzy全流程（线上）</a>
+  <br>
+  <a href="javascript:;" class="raise" id="a1">惠道官网（线上）</a>
+  <a href="javascript:;" class="raise" id="a2">用户管理（线上）</a>
+  <a href="javascript:;" id="a3" class="raise">资产管理（线上）</a>
+  <a href="javascript:;" id="channel" class="raise">渠道管理（线上）</a>
+  <!-- <a href="javascript:;" id="qd" class="raise">渠道管理（线上）</a> -->
+  <a href="javascript:;" class="raise" id="a4">全流程（线上）</a>
+  <br>
+  <a href="javascript:;" id="a5" class="pulse">企业邮箱</a>
+  <a href="javascript:;" id="a6" class="pulse">WIKI</a>
+  <a href="javascript:;" id="a7" class="pulse">禪道</a>
+  <a href="javascript:;" id="a10" class="pulse">密码修改</a>
+  <br>
+  <br>
+  <a href="javascript:;" id="a8" class="fill">dubbo服务管理(测试一)</a>
+  <div class="ewm">
+    <a href="javascript:;" id="a9" class="fill">外微(测试一)</a>
+    <span id="a9span"></span>
+  </div>
+  <div class="ewm">
+    <a href="javascript:;" id="aa9" class="fill">内微(测试一)</a>
+    <span id="aa9span"></span>
+  </div>
+  <a href="javascript:;" id="b1" class="fill">用户管理(测试一)</a>
+  <a href="javascript:;" id="b2" class="fill">资产管理(测试一)</a>
+  <a href="javascript:;" id="b10" class="fill">渠道管理(测试一)</a>
+  <a href="javascript:;" id="b3" class="fill">全流程(测试一)</a>
+  <br>
+  <br>
+  <a href="javascript:;" id="b4" class="up">dubbo服务管理(测试二)</a>
+  <div class="ewm">
+    <a href="javascript:;" id="b5" class="up">外微(测试二)</a>
+    <span id="b5span"></span>
+  </div>
+  <div class="ewm">
+    <a href="javascript:;" id="bb5" class="up">内微(测试二)</a>
+    <span id="bb5span"></span>
+  </div>
+  <a href="javascript:;" id="b6" class="up">用户管理(测试二</a>
+  <a href="javascript:;" id="b7" class="up">资产管理(测试二)</a>
+  <a href="javascript:;" id="b9" class="up">渠道管理(测试二)</a>
+  <a href="javascript:;" id="b8" class="up">全流程(测试二)</a>
+  <br>
+  <br>
+  <a href="javascript:;" id="c1" class="offset">dubbo服务管理(开发)</a>
+  <a href="javascript:;" id="c2" class="offset">惠道官网(开发)</a>
+  <a href="javascript:;" id="c3" class="offset">用户管理(开发)</a>
+  <a href="javascript:;" id="c4" class="offset">资产管理(开发)</a>
+  <a href="javascript:;" id="c10" class="offset">渠道管理(开发)</a>
+  <a href="javascript:;" id="c5" class="offset">全流程(开发)</a>
+  <br>
+  <br>
+  <a href="javascript:;" id="c7" class="close">maven</a>
+  <a href="javascript:;" id="c8" class="close">jenkins</a>
+  <a href="javascript:;" id="c9" class="close">git</a>
+  <a href="javascript:;" id="c11" class="close">jenkins-online</a>
+  <a href="javascript:;" id="c12" class="close">Docker Registry</a>
+  <a href="javascript:;" id="c13" class="close">ladp统一认证</a>
+  <!-- <a href="" target="_black" class="slide">惠道官网</a> -->
+</div>
+</body>
+<script>
+    openNew('d1', "http://visitantfin.com/");
+    openNew('d2', "http://manage.visitantfin.com/");
+    openNew('d3', "http://asset.visitantfin.com/#/pages/login");
+    openNew('d4', "http://channel.visitantfin.com/views/login.html");
+    openNew('d5', "http://fullflow.visitantfin.com/");
+
+
+
+  openNew('a1', "http://huidaokeji.com.cn/");
+  openNew('a2', "http://manage.huidaokeji.com.cn/");
+  openNew('a3', "http://asset.huidaokeji.com.cn/#/pages/login");
+  openNew('a4', "http://fullflow.huidaokeji.com.cn/");
+  openNew('a5', "https://exmail.qq.com/cgi-bin/loginpage");
+  openNew('a6', "http://www.wiki.hd.com/login.action?os_destination=%2Findex.action&permissionViolation=true#all-updates");
+  openNew('a7', "http://www.cd.hd.com/zentao/user-login-L3plbnRhby9teS5odG1s.html");
+  openNew('a8', "http://www.dubbo.admin.test1.hd.com/");
+  openNew('a10', "http://172.18.1.137");
+  openNew('b1', "http://www.user.test1.hd.com/");
+  openNew('b2', "http://www.asset.test1.hd.com/");
+  openNew('b3', "http://www.qlc.test1.hd.com/");
+  openNew('b4', "http://www.dubbo.admin.test2.hd.com/");
+  openNew('b6', "http://www.user.test2.hd.com/");
+  openNew('b7', "http://www.asset.test2.hd.com/");
+  openNew('b8', "http://www.qlc.test2.hd.com/");
+  openNew('c1', "http://www.dubbo.admin.dev.com/");
+  openNew('c2', "http://www.official.dev.com/");
+  openNew('c3', "http://www.user.dev.com/");
+  openNew('c4', "http://www.asset.dev.com/");
+  openNew('c5', "http://www.qlc.dev.com/");
+  openNew('c7', "http://www.nexus.hd.com/#welcome");
+  openNew('c8', "http://www.jenkins.hd.com/");
+  openNew('c9', "http://www.git.hd.com/");
+  openNew('b10', "http://172.20.1.16:9010/views/login.html");//1
+  openNew('b9', "http://172.20.1.116:9010/views/login.html"); //2
+  openNew('c10', "http://172.18.1.119:9010/views/login.html");//开发
+  openNew('channel', "http://channel.huidaokeji.com.cn/views/login.html");
+  openNew('c11', "http://www.jenkins.online.hd.com/");
+  openNew('c12', "http://172.18.1.133/");
+  openNew('c13', "http://172.18.1.136/");
+  function openNew(id, url) {
+    document.getElementById(id).onclick = function () {
+      window.open(url);
+    }
+  }
+  // 内外微
+  hover('b5','b5span');    //外微(测试二)
+  hover('bb5','bb5span');    //内微(测试二)
+  hover('a9','a9span');    //外微(测试一)
+  hover('aa9','aa9span');    //内微(测试一)
+  outhover('b5','b5span');
+  outhover('bb5','bb5span');
+  outhover('a9','a9span');
+  outhover('aa9','aa9span');
+  function hover(id, span) {
+    document.getElementById(id).onmouseover = function () {
+      document.getElementById(span).style.display = 'block';
+    }
+  }
+  function outhover(id, span) {
+    document.getElementById(id).onmouseout = function () {
+      document.getElementById(span).style.display = 'none';
+    }
+  }
+</script>
+</html>
