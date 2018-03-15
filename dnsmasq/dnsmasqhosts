@@ -1,0 +1,49 @@
+
+
+172.20.1.180  www.huidao.com
+
+## 企业服务
+172.18.1.105  www.git.hd.com  git.hd.com
+172.18.1.106  www.cd.hd.com   cd.hd.com
+172.18.1.101  www.nexus.hd.com   nexus.hd.com
+172.20.1.180  www.mysql.hd.com
+172.20.1.180  www.wiki.hd.com
+172.20.1.180  www.jenkins.hd.com  jenkins.hd.com
+172.18.1.132  www.reg.hd.com
+172.18.1.117  www.docker.admin.com
+172.20.1.180  www.jenkins.online.hd.com
+## 原来beebank的服务
+172.20.1.179  www.qlc.hd.com  qlc.hd.com
+172.20.1.186  www.data1.hd.com
+172.20.1.16   www.test1.hd.com  test1.hd.com
+
+
+
+## 开发环境
+172.18.1.112   www.mysql.dev.com
+172.18.1.113   www.redis.dev.com
+172.18.1.114   www.zk.dev.com
+172.18.1.115   www.qlc.dev.com
+172.18.1.115   www.user.dev.com
+172.18.1.115   www.asset.dev.com
+172.18.1.115   www.official.dev.hd.com
+172.18.1.119   www.dev.hd.com
+172.18.1.118   www.dubbo.admin.dev.com
+
+## 测试一环境
+172.18.1.115    www.qlc.test1.hd.com
+172.18.1.115    www.asset.test1.hd.com
+172.18.1.115    www.official.test1.hd.com
+172.18.1.115    www.user.test1.hd.com
+172.20.1.16    www.test1.hd.com
+172.18.1.120   www.dubbo.admin.test1.hd.com
+
+## 测试二环境
+172.18.1.115    www.qlc.test2.hd.com
+172.18.1.115    www.asset.test2.hd.com
+172.18.1.115    www.official.test2.hd.com
+172.18.1.115    www.user.test2.hd.com
+172.20.1.116    www.test2.hd.com
+172.18.1.121   www.dubbo.admin.test2.hd.com
+
+

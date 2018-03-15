@@ -1,0 +1,62 @@
+version: '2.1'
+
+services:
+  jenkins_node:
+    build: ../jenkins_node
+    image:  alpine:jenkins_node_v1
+    container_name: jenkins_node
+    user: root
+    mem_limit: 8G
+    volumes:
+      - ${SERVICE_HOME}/dockerconf/jenkins_node:/root/jenkins
+      - mvn_repository:/root/.m2
+      - /etc/localtime:/etc/localtime:ro
+    dns:
+      - 172.20.1.180
+      - 114.114.114.114
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.22.1.2
+#  dnsmasq:
+#    build: ../dnsmasq
+#    image:  andyshinn/dnsmasq
+#    container_name: dnsmasq
+#    cap_add:
+#      - NET_ADMIN
+#    ports:
+#      - "53:53/tcp"
+#      - "53:53/udp"
+#    volumes:
+#      - ../dnsmasq/dnsmasqhosts:/etc/dnsmasqhosts
+#    restart: always
+#    networks:
+#      default:
+#        ipv4_address: 172.22.1.3
+  jenkins_node_1:
+    build: ../jenkins_node
+    image:  alpine:jenkins_node_v1
+    container_name: jenkins_node_1
+    user: root
+    mem_limit: 2G
+    volumes:
+      - ${SERVICE_HOME}/dockerconf/jenkins_node_1:/root/jenkins
+      - mvn_repository:/root/.m2
+      - /etc/localtime:/etc/localtime:ro
+    dns:
+      - 172.20.1.180
+      - 114.114.114.114
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.22.1.4
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.22.1.0/16
+          gateway: 172.22.1.1
+volumes:
+  mvn_repository:
+    external: true
